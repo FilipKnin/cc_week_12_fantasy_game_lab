@@ -30,6 +30,14 @@ public abstract class Player {
         return this.tools.size();
     }
 
+    public void increaseHp(int hpPoints) {
+        this.hp = this.hp + hpPoints;
+    }
+
+    public void decreaseHp(int hpPoints) {
+        this.hp = this.hp - hpPoints;
+    }
+
 
 
 }
