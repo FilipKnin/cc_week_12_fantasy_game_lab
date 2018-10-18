@@ -40,6 +40,10 @@ public class Room {
         return this.party.size();
     }
 
+    public ArrayList<Player> getParty() {
+        return this.party;
+    }
+
     public void setParty(ArrayList<Player> party) {
         this.party = party;
     }

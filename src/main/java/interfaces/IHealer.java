@@ -1,9 +1,10 @@
 package interfaces;
 
+import players.Player;
 import tools.HealingTool;
 
 public interface IHealer {
 
-    int heal(HealingTool healingTool);
+    void heal(HealingTool healingTool, Player player);
 
 }

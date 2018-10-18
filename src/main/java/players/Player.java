@@ -1,5 +1,6 @@
 package players;
 
+import rooms.Room;
 import tools.Tools;
 
 import java.util.ArrayList;
@@ -42,7 +43,9 @@ public abstract class Player {
         this.hp = this.hp - hpPoints;
     }
 
-    public void collectTreasure() {
+    public void collectTreasure(Room room) {
+        this.treasure += room.getTreasure();
+        room.setTreasure(0);
     }
 
     public void takeTurn() {
