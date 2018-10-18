@@ -1,4 +1,7 @@
 package players;
 
-public class Warlock {
+public class Warlock extends Player {
+    public Warlock(int hp, int strength) {
+        super(hp, strength);
+    }
 }
