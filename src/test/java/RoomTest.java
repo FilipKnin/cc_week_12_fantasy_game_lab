@@ -75,4 +75,13 @@ public class RoomTest {
         assertEquals(4, room.getTurnsCount());
     }
 
+//    @Test
+//    public void combat() {
+//        room.setBoss(boss);
+//        room.setParty(party);
+//        room.combat();
+//        assertEquals();
+//    }
+
+
 }
