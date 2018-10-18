@@ -14,5 +14,22 @@ public abstract class Player {
         this.tools = new ArrayList<>();
     }
 
+    public int getHp() {
+        return this.hp;
+    }
+
+    public int getStrength() {
+        return this.strength;
+    }
+
+    public ArrayList<Tools> getTools() {
+        return this.tools;
+    }
+
+    public int countTools() {
+        return this.tools.size();
+    }
+
+
 
 }
