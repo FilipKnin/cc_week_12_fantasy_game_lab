@@ -22,7 +22,10 @@ public class Boss extends Player implements IHealer, IMagical, IWarrior {
     }
 
     @Override
-    public int heal(HealingTool healingTool) {
+    public void heal(HealingTool healingTool, Player player) {
+
+    }
+    public int heal2(HealingTool healingTool) {
         int healingMin = healingTool.getDamageRestored();
         int healingMax = healingMin + getStrength();
         return randomWithRange(healingMin, healingMax);
