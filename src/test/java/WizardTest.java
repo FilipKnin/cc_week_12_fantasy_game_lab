@@ -1,16 +1,19 @@
 import org.junit.Before;
 import org.junit.Test;
 import players.Wizard;
+import tools.Spell;
 
 import static org.junit.Assert.assertEquals;
 
 public class WizardTest {
 
     Wizard wizard;
+    Spell spell;
 
     @Before
     public void before() {
         wizard = new Wizard(100,8);
+        spell = new Spell("BallOfFire", 10);
     }
 
     @Test
@@ -39,4 +42,11 @@ public class WizardTest {
         wizard.decreaseHp(10);
         assertEquals(90, wizard.getHp() );
     }
+
+    @Test
+    public void canCastSpell() {
+        assertEquals(10, wizard.castSpell(spell));
+    }
+
+
 }

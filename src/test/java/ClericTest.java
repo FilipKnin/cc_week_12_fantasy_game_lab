@@ -1,16 +1,19 @@
 import org.junit.Before;
 import org.junit.Test;
 import players.Cleric;
+import tools.HealingTool;
 
 import static org.junit.Assert.assertEquals;
 
 public class ClericTest {
 
     Cleric cleric;
+    HealingTool healingTool;
 
     @Before
     public void before() {
         cleric = new Cleric(100,8);
+        healingTool = new HealingTool("Potion", 10);
     }
 
     @Test
@@ -38,5 +41,10 @@ public class ClericTest {
     public void canDecreaseHp() {
         cleric.decreaseHp(10);
         assertEquals(90, cleric.getHp() );
+    }
+
+    @Test
+    public void canHeal() {
+        assertEquals(10, cleric.heal(healingTool));
     }
 }

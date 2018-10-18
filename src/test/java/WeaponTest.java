@@ -23,4 +23,6 @@ public class WeaponTest {
         assertEquals(10, weapon.getDamage());
     }
 
+
+
 }

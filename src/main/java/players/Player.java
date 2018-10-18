@@ -1,5 +1,7 @@
 package players;
 
+import tools.Tools;
+
 import java.util.ArrayList;
 
 public abstract class Player {
@@ -7,12 +9,12 @@ public abstract class Player {
     private int hp;
     private int strength;
     private int treasure;
-//    private ArrayList<Tools> tools;
+    private ArrayList<Tools> tools;
 
     public Player(int hp, int strength) {
         this.hp = hp;
         this.strength = strength;
-//        this.tools = new ArrayList<>();
+        this.tools = new ArrayList<>();
         this.treasure = 0;
     }
 
@@ -24,13 +26,13 @@ public abstract class Player {
         return this.strength;
     }
 
-//    public ArrayList<Tools> getTools() {
-//        return this.tools;
-//    }
-//
-//    public int countTools() {
-//        return this.tools.size();
-//    }
+    public ArrayList<Tools> getTools() {
+        return this.tools;
+    }
+
+    public int countTools() {
+        return this.tools.size();
+    }
 
     public void increaseHp(int hpPoints) {
         this.hp = this.hp + hpPoints;
@@ -54,7 +56,7 @@ public abstract class Player {
         this.treasure = treasure;
     }
 
-//    public void addTool(Tool tool) {
-//        this.tools.add(tool);
-//    }
+    public void addTool(Tools tool) {
+        this.tools.add(tool);
+    }
 }

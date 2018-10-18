@@ -1,16 +1,19 @@
 import org.junit.Before;
 import org.junit.Test;
 import players.Warlock;
+import tools.Spell;
 
 import static org.junit.Assert.assertEquals;
 
 public class WarlockTest {
 
     Warlock warlock;
+    Spell spell;
 
     @Before
     public void before() {
         warlock = new Warlock(100,8);
+        spell = new Spell("BallOfFire", 10);
     }
 
     @Test
@@ -38,5 +41,10 @@ public class WarlockTest {
     public void canDecreaseHp() {
         warlock.decreaseHp(10);
         assertEquals(90, warlock.getHp() );
+    }
+
+    @Test
+    public void canCastSpell() {
+        assertEquals(10, warlock.castSpell(spell));
     }
 }

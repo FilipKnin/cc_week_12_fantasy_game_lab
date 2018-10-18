@@ -1,16 +1,20 @@
 import org.junit.Before;
 import org.junit.Test;
 import players.Knight;
+import tools.Weapon;
 
 import static org.junit.Assert.assertEquals;
 
 public class RangerTest {
 
     Knight knight;
+    Weapon weapon1;
+
 
     @Before
     public void before() {
         knight = new Knight(100,8);
+        weapon1 = new Weapon("Axe", 10);
     }
 
     @Test
@@ -38,5 +42,10 @@ public class RangerTest {
     public void canDecreaseHp() {
         knight.decreaseHp(10);
         assertEquals(90, knight.getHp() );
+    }
+
+    @Test
+    public void canAttack() {
+        assertEquals(10, knight.attack(weapon1));
     }
 }
