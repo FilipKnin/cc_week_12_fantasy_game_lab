@@ -44,12 +44,18 @@ public abstract class Player {
     }
 
     public void takeTurn() {
-
     }
 
     public int getTreasure() {
         return this.treasure;
     }
 
+    public void setTreasure(int treasure) {
+        this.treasure = treasure;
+    }
 
+    public void addTool(Tool tool) {
+        this.tools.add(tool);
+
+    }
 }
