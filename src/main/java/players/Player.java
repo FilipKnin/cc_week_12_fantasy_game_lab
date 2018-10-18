@@ -6,12 +6,14 @@ public abstract class Player {
 
     private int hp;
     private int strength;
+    private int treasure;
     private ArrayList<Tools> tools;
 
     public Player(int hp, int strength) {
         this.hp = hp;
         this.strength = strength;
         this.tools = new ArrayList<>();
+        this.treasure = 0;
     }
 
     public int getHp() {
@@ -38,6 +40,16 @@ public abstract class Player {
         this.hp = this.hp - hpPoints;
     }
 
+    public void collectTreasure() {
+    }
+
+    public void takeTurn() {
+
+    }
+
+    public int getTreasure() {
+        return this.treasure;
+    }
 
 
 }
