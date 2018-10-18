@@ -1,26 +1,26 @@
 import org.junit.Before;
 import org.junit.Test;
-import tools.Weapon;
+import tools.Spell;
 
 import static org.junit.Assert.assertEquals;
 
-public class WeaponTest {
+public class SpellTest {
 
-    private Weapon weapon;
+    private Spell spell;
 
     @Before
     public void before(){
-        weapon = new Weapon("Axe", 10);
+        spell = new Spell("BallOfFire", 10);
     }
 
     @Test
     public void getToolType(){
-        assertEquals("Axe", weapon.getName());
+        assertEquals("BallOfFire", spell.getName());
     }
 
     @Test
     public void getDamage(){
-        assertEquals(10, weapon.getDamage());
+        assertEquals(10, spell.getDamage());
     }
 
 }
