@@ -1,6 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
-import players.Player;
+import players.*;
 import rooms.Room;
 
 import java.util.ArrayList;
@@ -19,10 +19,10 @@ public class RoomTest {
     @Before
     public void before() {
         room = new Room();
-        boss = new Player();
-        cleric = new Player();
-        barbarian = new Player();
-        wizard = new Player();
+        boss = new Boss(100, 10);
+        cleric = new Cleric(110, 7);
+        barbarian = new Barbarian(150, 5);
+        wizard = new Wizard(50, 15);
         party = new ArrayList<>();
         party.add(cleric);
         party.add(barbarian);
