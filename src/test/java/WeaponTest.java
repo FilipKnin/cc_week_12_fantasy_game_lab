@@ -14,7 +14,7 @@ public class WeaponTest {
     }
 
     @Test
-    public void getToolType(){
+    public void getName(){
         assertEquals("Axe", weapon.getName());
     }
 

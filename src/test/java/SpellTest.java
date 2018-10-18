@@ -14,7 +14,7 @@ public class SpellTest {
     }
 
     @Test
-    public void getToolType(){
+    public void getName(){
         assertEquals("BallOfFire", spell.getName());
     }
 

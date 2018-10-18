@@ -14,7 +14,7 @@ public class HealingToolTest {
     }
 
     @Test
-    public void getToolType(){
+    public void getName(){
         assertEquals("Potion", healingTool.getName());
     }
 
