@@ -4,4 +4,7 @@ public class Knight extends Player {
     public Knight(int hp, int strength) {
         super(hp, strength);
     }
+
+//    public int attack(Weapon weapon) {
+//    }
 }
