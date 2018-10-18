@@ -1,9 +1,11 @@
 package rooms;
 
+import players.Player;
+
 public class Room {
 
     private int treasure;
-    private String boss;
+    private Player boss;
 
     public Room() {
         this.treasure = 0;
@@ -18,11 +20,11 @@ public class Room {
         this.treasure = treasure;
     }
 
-    public String getBoss() {
+    public Player getBoss() {
         return this.boss;
     }
 
-    public void setBoss(String boss) {
+    public void setBoss(Player boss) {
         this.boss = boss;
     }
 }

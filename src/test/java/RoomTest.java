@@ -1,5 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
+import players.Player;
 import rooms.Room;
 
 import static org.junit.Assert.assertEquals;
@@ -7,10 +8,12 @@ import static org.junit.Assert.assertEquals;
 public class RoomTest {
 
     Room room;
+    Player boss;
 
     @Before
     public void before() {
         room = new Room();
+        boss = new Player();
     }
 
     @Test
@@ -31,8 +34,8 @@ public class RoomTest {
 
     @Test
     public void canSetBoss() {
-        room.setBoss("boss");
-        assertEquals("boss", room.getBoss());
+        room.setBoss(boss);
+        assertEquals(boss, room.getBoss());
     }
 
 }
